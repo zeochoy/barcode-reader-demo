@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row">
+
+  <form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+    <label for="upload" class="form-label mt-4">Scan your barcode</label>
+    <input class="form-control" type="file" name="image" accept="image/*" required id="id_image">
+    <br>
+    <input type="submit" class="btn btn-primary" value="Get Suggetion !">
+  </form>
+
+</div>
+
+{% endblock  %}
